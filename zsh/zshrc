@@ -1,0 +1,60 @@
+# Oh my zsh install path
+export ZSH=/home/alien/.oh-my-zsh
+
+# Theme
+ZSH_THEME="robbyrussell"
+
+# History date format
+HIST_STAMPS="mm/dd/yyyy"
+
+# Plugins
+plugins=(git)
+
+# Launches Oh my zsh
+source $ZSH/oh-my-zsh.sh
+
+# Adds global local/bin folder
+PATH=/usr/local/bin:$PATH
+
+# Python virtualenvwrapper
+source virtualenvwrapper.sh
+
+# Sets Neovim has default editor
+alias vim=nvim
+export VISUAL=vim
+
+# Exports all installed python version (via Pythonz) to
+# the user PATH
+if [[ -s $HOME/.pythonz/etc/bashrc ]]
+then
+    source $HOME/.pythonz/etc/bashrc
+    PATH=$PATH:$(pythonz list -p | awk 'BEGIN {ORS=":"} /^ / {print $2"/bin"}')
+fi
+
+# Java
+JAVA_HOME=/usr/local/java/jdk1.8.0_102
+PATH=$PATH:$JAVA_HOME
+export JAVA_HOME
+
+# Android Studio
+ANDROID_STUDIO=/usr/local/android-studio
+PATH=$PATH:$ANDROID_STUDIO/bin
+
+# Exercism
+EXERCISM=$HOME/bin
+PATH=$PATH:$EXERCISM
+
+# QWT
+QWT_ROOT=$HOME/local/qwt-6.1.3
+
+# CMake
+CMAKE_ROOT=/opt/cmake
+PATH=$PATH:$CMAKE_ROOT/bin
+
+# Go
+GOROOT=/usr/local/go
+PATH=$PATH:$GOROOT/bin
+
+# Pico-8
+PICO8_ROOT=$HOME/pico-8
+PATH=$PATH:$PICO8_ROOT
