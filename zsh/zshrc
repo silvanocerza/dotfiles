@@ -21,7 +21,7 @@ source virtualenvwrapper.sh
 
 # Sets Neovim has default editor
 alias vim=nvim
-export VISUAL=vim
+export VISUAL=nvim
 
 # Exports all installed python version (via Pythonz) to
 # the user PATH
