@@ -7,6 +7,11 @@ Plug 'tomasr/molokai'
 " Auto complete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
+Plug 'davidhalter/jedi-vim'
+Plug 'ervandew/supertab'
+
+" Markdown
+Plug 'suan/vim-instant-markdown'
 
 " Status line
 Plug 'vim-airline/vim-airline'
@@ -28,6 +33,7 @@ Plug 'airblade/vim-gitgutter'
 " Cool icons
 Plug 'ryanoasis/vim-devicons'
 
+" Kills buffers without closing windows
 Plug 'qpkorr/vim-bufkill'
 
 " Initializes plugin system
@@ -42,6 +48,9 @@ set termguicolors
 " Color scheme
 syntax enable
 colorscheme molokai
+
+" Sets colored line at specified column
+let &colorcolumn="81,".join(range(121,999),",")
 
 " Trims whitespace on save
 autocmd BufWritePost * StripWhitespace
@@ -58,6 +67,9 @@ set clipboard+=unnamedplus
 
 " Shows line numbers
 set number
+
+" Keeps cursors centered vertically on the screen
+set scrolloff=999
 
 " Number of spaces used when tab is read from a file
 set tabstop=4
@@ -83,6 +95,13 @@ set showmatch
 
 " Highlights matching searched chars
 set hlsearch
+
+" Shows spaces and various non visible chars
+set listchars=tab:→\ ,space:·,trail:·
+set list
+
+" New splits are added below current window, this is useful mainly for previews
+set splitbelow
 
 " Neovim python versions
 let g:python_host_prog = '/home/alien/.virtualenvs/neovim2/bin/python'
@@ -110,19 +129,36 @@ let g:airline_right_sep = ' '
 
 " Deoplete settings
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#jedi#show_docstring = 1
+
+" Jedi settings
+let g:jedi#completions_enabled = 0 " Disables jedi autocomplete since I use deoplete
+
+" Closes autocomplete preview window when done
+autocmd CompleteDone * silent! pclose!
+
+" Supertab settings
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " Git gutter settings
 let g:gitgutter_sign_column_always = 1
+
+" Markdown settings
+let g:instant_markdown_slow = 1
+let g:instant_markdown_autostart = 0
 
 " -------------- Key Mappings --------------
 
 " Changes leader
 let mapleader=';'
 
-" turns off search highlight by pressing leader + space
+" Switches between C++ header and source
+map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
+
+" Turns off search highlight by pressing leader + space
 nnoremap <leader><space> :nohlsearch<cr>
 
-" opens nerdtree with ctrl+n
+" Opens nerdtree with ctrl+n
 map <C-n> :NERDTreeToggle<CR>
 
 " Maps j+k to esc insert mode
@@ -137,5 +173,5 @@ nmap <leader>q :q<CR>
 nmap <S-Tab> :bprevious!<CR>
 nmap <Tab> :bnext!<CR>
 
-"Closes current tab
+" Closes current buffer
 nnoremap <leader>bd :BD<CR>
