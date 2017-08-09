@@ -58,3 +58,6 @@ PATH=$PATH:$GOROOT/bin
 # Pico-8
 PICO8_ROOT=$HOME/pico-8
 PATH=$PATH:$PICO8_ROOT
+
+# An colored alternative to ls
+alias ls=exa
