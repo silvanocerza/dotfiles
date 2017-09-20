@@ -103,6 +103,9 @@ set list
 " New splits are added below current window, this is useful mainly for previews
 set splitbelow
 
+" Enables mouse selection
+set mouse=a
+
 " Neovim python versions
 let g:python_host_prog = '/home/alien/.virtualenvs/neovim2/bin/python'
 let g:python3_host_prog = '/home/alien/.virtualenvs/neovim3/bin/python'
