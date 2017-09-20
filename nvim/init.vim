@@ -141,7 +141,7 @@ autocmd CompleteDone * silent! pclose!
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " Git gutter settings
-let g:gitgutter_sign_column_always = 1
+set signcolumn=yes
 
 " Markdown settings
 let g:instant_markdown_slow = 1
