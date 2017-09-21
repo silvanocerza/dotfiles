@@ -68,9 +68,6 @@ set clipboard+=unnamedplus
 " Shows line numbers
 set number
 
-" Keeps cursors centered vertically on the screen
-set scrolloff=999
-
 " Number of spaces used when tab is read from a file
 set tabstop=4
 
