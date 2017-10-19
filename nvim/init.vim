@@ -1,6 +1,10 @@
 " Start plugins section by specifying plugin directory
 call plug#begin('~/.local/share/nvim/plugged')
 
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 " Color scheme
 Plug 'tomasr/molokai'
 
@@ -175,3 +179,4 @@ nmap <Tab> :bnext!<CR>
 
 " Closes current buffer
 nnoremap <leader>bd :BD<CR>
+nnoremap <C-p> :FZF<CR>
