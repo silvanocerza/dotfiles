@@ -63,3 +63,7 @@ PATH=$PATH:$PICO8_ROOT
 alias ls=exa
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Qbs
+QBS_ROOT=$HOME/Qt/Tools/QtCreator/bin
+PATH=$PATH:$QBS_ROOT
