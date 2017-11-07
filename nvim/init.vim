@@ -71,6 +71,7 @@ set clipboard+=unnamedplus
 
 " Shows line numbers
 set number
+set relativenumber
 
 " Number of spaces used when tab is read from a file
 set tabstop=4
