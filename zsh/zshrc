@@ -67,3 +67,7 @@ alias ls=exa
 # Qbs
 QBS_ROOT=$HOME/Qt/Tools/QtCreator/bin
 PATH=$PATH:$QBS_ROOT
+
+# Flutter
+FLUTTER_ROOT=$HOME/flutter
+PATH=$PATH:$FLUTTER_ROOT/bin

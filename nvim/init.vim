@@ -9,9 +9,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'tomasr/molokai'
 
 " Auto complete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
-Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
 
 " Markdown
@@ -132,18 +129,8 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_left_sep = ' '
 let g:airline_right_sep = ' '
 
-" Deoplete settings
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#jedi#show_docstring = 1
-
-" Jedi settings
-let g:jedi#completions_enabled = 0 " Disables jedi autocomplete since I use deoplete
-
 " Closes autocomplete preview window when done
 autocmd CompleteDone * silent! pclose!
-
-" Supertab settings
-let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " Git gutter settings
 set signcolumn=yes
