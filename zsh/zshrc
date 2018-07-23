@@ -1,5 +1,5 @@
 # Oh my zsh install path
-export ZSH=/home/alien/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Theme
 ZSH_THEME="robbyrussell"
