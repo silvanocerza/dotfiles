@@ -78,3 +78,7 @@ PATH=$PATH:$HOME/.local/bin
 
 # Adds binaries installed with yarn to PATH
 PATH=$PATH:$HOME/.yarn/bin
+
+# Bat settings
+alias cat='bat --style=numbers,changes,grid'
+export BAT_THEME="Monokai Extended"
