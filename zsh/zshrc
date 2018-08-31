@@ -53,7 +53,8 @@ PATH=$PATH:$CMAKE_ROOT/bin
 
 # Go
 GOROOT=/usr/local/go
-PATH=$PATH:$GOROOT/bin
+GOPATH=$HOME/workspace/go
+PATH=$PATH:$GOROOT/bin:$GOPATH
 
 # Pico-8
 PICO8_ROOT=$HOME/pico-8
@@ -71,3 +72,9 @@ PATH=$PATH:$QBS_ROOT
 # Flutter
 FLUTTER_ROOT=$HOME/flutter
 PATH=$PATH:$FLUTTER_ROOT/bin
+
+# Adds cookiecutter to PATH
+PATH=$PATH:$HOME/.local/bin
+
+# Adds binaries installed with yarn to PATH
+PATH=$PATH:$HOME/.yarn/bin
