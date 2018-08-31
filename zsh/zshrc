@@ -63,7 +63,25 @@ PATH=$PATH:$PICO8_ROOT
 # An colored alternative to ls
 alias ls=exa
 
+# fzf configs
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Uses fd as default command showing also hidden files
+FZF_DEFAULT_COMMAND="fd --hidden"
+
+# ctrl+o opens Visual Studio Code on current folder or file
+FZF_DEFAULT_OPTS="--bind='ctrl-o:execute-silent(code {})+abort'"
+
+# If current selection is a text file shows its content,
+# if it's a directory shows its content, the rest is ignored
+FZF_CTRL_T_OPTS="--preview '
+if [[ -f {} ]]; then
+    file --mime {} | grep -q 'text\/plain' && bat --color \"always\" {} || (tput setaf 1; echo Not a text file)
+elif [[ -d {} ]]; then
+    exa -l --color always {}
+else;
+    tput setaf 1; echo YOU ARE NOT SUPPOSED TO SEE THIS!
+fi'"
 
 # Qbs
 QBS_ROOT=$HOME/Qt/Tools/QtCreator/bin
