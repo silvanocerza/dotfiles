@@ -76,7 +76,7 @@ FZF_DEFAULT_OPTS="--bind='ctrl-o:execute-silent(code {})+abort'"
 # if it's a directory shows its content, the rest is ignored
 FZF_CTRL_T_OPTS="--preview '
 if [[ -f {} ]]; then
-    file --mime {} | grep -q 'text\/plain' && bat --color \"always\" {} || (tput setaf 1; echo Not a text file)
+    file --mime {} | grep -q \"text\/.*;\" && bat --color \"always\" {} || (tput setaf 1; echo Not a text file)
 elif [[ -d {} ]]; then
     exa -l --color always {}
 else;
