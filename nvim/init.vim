@@ -116,9 +116,6 @@ let g:NERDTreeIgnore = ['\.pyc$', '__pycache__', '\.qmlc$']
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 
-" Opens NERDTree automatically when opening vim
-autocmd vimenter * NERDTree
-
 " Airline settings
 let g:airline_theme = 'molokai'
 let g:airline_powerline_fonts = 1
