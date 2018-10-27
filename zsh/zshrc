@@ -64,7 +64,7 @@ PATH=$PATH:$PICO8_ROOT
 alias ls=exa
 
 # fzf configs
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 
 # Uses fd as default command showing also hidden files
 FZF_DEFAULT_COMMAND="fd --hidden"
