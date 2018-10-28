@@ -102,4 +102,4 @@ alias cat='bat --style=numbers,changes,grid'
 export BAT_THEME="Monokai Extended"
 
 # Launches tmux if not already inside
-[ "$TMUX" = "" ] && tmux
+[ $DISPLAY ] && [ -z $TMUX ] && tmux
