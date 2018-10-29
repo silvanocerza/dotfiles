@@ -6,7 +6,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Color scheme
-Plug 'tomasr/molokai'
+Plug 'morhetz/gruvbox'
 
 " Auto complete
 Plug 'ervandew/supertab'
@@ -43,12 +43,14 @@ call plug#end()
 " -------------- Various Settings --------------
 
 " color scheme settings
-let g:molokai_original = 1
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_italic = 1
+set background=dark
 set termguicolors
 
 " Color scheme
 syntax enable
-colorscheme molokai
+colorscheme gruvbox
 
 " Sets colored line at specified column
 let &colorcolumn="81,".join(range(121,999),",")
