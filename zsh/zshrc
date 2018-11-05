@@ -40,10 +40,6 @@ export JAVA_HOME
 ANDROID_STUDIO=/usr/local/android-studio
 PATH=$PATH:$ANDROID_STUDIO/bin
 
-# Exercism
-EXERCISM=$HOME/bin
-PATH=$PATH:$EXERCISM
-
 # QWT
 QWT_ROOT=$HOME/local/qwt-6.1.3
 
