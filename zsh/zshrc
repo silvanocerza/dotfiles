@@ -13,9 +13,6 @@ plugins=(git)
 # Launches Oh my zsh
 source $ZSH/oh-my-zsh.sh
 
-# Adds global local/bin folder
-PATH=/usr/local/bin:$PATH
-
 # Python virtualenvwrapper
 source virtualenvwrapper.sh
 
@@ -30,31 +27,6 @@ then
     source $HOME/.pythonz/etc/bashrc
     PATH=$PATH:$(pythonz list -p | awk 'BEGIN {ORS=":"} /^ / {print $2"/bin"}')
 fi
-
-# Java
-JAVA_HOME=/usr/local/java/jdk1.8.0_102
-PATH=$PATH:$JAVA_HOME
-export JAVA_HOME
-
-# Android Studio
-ANDROID_STUDIO=/usr/local/android-studio
-PATH=$PATH:$ANDROID_STUDIO/bin
-
-# QWT
-QWT_ROOT=$HOME/local/qwt-6.1.3
-
-# CMake
-CMAKE_ROOT=/opt/cmake
-PATH=$PATH:$CMAKE_ROOT/bin
-
-# Go
-GOROOT=/usr/local/go
-GOPATH=$HOME/workspace/go
-PATH=$PATH:$GOROOT/bin:$GOPATH
-
-# Pico-8
-PICO8_ROOT=$HOME/pico-8
-PATH=$PATH:$PICO8_ROOT
 
 # An colored alternative to ls
 alias ls=exa
@@ -82,16 +54,6 @@ fi'"
 # Qbs
 QBS_ROOT=$HOME/Qt/Tools/QtCreator/bin
 PATH=$PATH:$QBS_ROOT
-
-# Flutter
-FLUTTER_ROOT=$HOME/flutter
-PATH=$PATH:$FLUTTER_ROOT/bin
-
-# Adds cookiecutter to PATH
-PATH=$PATH:$HOME/.local/bin
-
-# Adds binaries installed with yarn to PATH
-PATH=$PATH:$HOME/.yarn/bin
 
 # Bat settings
 alias cat='bat --style=numbers,changes,grid'
