@@ -51,6 +51,10 @@ else;
     tput setaf 1; echo YOU ARE NOT SUPPOSED TO SEE THIS!
 fi'"
 
+# Golang
+export GOPATH=$HOME/go
+PATH=$PATH:$(go env GOPATH)/bin
+
 # Qbs
 QBS_ROOT=$HOME/Qt/Tools/QtCreator/bin
 PATH=$PATH:$QBS_ROOT
