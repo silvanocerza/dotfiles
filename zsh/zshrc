@@ -14,7 +14,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Python virtualenvwrapper
-source virtualenvwrapper.sh
+source virtualenvwrapper_lazy.sh
 
 # Sets Neovim has default editor
 alias vim=nvim
