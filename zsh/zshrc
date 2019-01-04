@@ -55,6 +55,8 @@ fi'"
 export GOPATH=$HOME/go
 PATH=$PATH:$(go env GOPATH)/bin
 
+PATH=$PATH:$HOME/.local/bin
+
 # Qbs
 QBS_ROOT=$HOME/Qt/Tools/QtCreator/bin
 PATH=$PATH:$QBS_ROOT
