@@ -31,6 +31,9 @@ fi
 # An colored alternative to ls
 alias ls=exa
 
+# I don't want rg to be a smartass
+alias rg='rg -uu'
+
 # fzf configs
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 
