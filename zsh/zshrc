@@ -76,5 +76,8 @@ export XAUTHORITY=$HOME/.Xauthority
 
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 
+# Binaries installed with Yarn
+PATH=$PATH:$HOME/.yarn/bin
+
 # Launches tmux if not already inside
 [ $DISPLAY ] && [ -z $TMUX ] && tmux
