@@ -1,1 +1,1 @@
-ln -s $(pwd)/monaco_powerline_nerdfont_complete.otf ~/.local/share/fonts/monaco_powerline_nerdfont_complete.otf
+ln -s $(pwd)/Monaco\ Nerd\ Font\ Complete.otf ~/.local/share/fonts/Monaco\ Nerd\ Font\ Complete.otf
