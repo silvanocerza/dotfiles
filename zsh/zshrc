@@ -66,7 +66,7 @@ PATH=$PATH:$QBS_ROOT
 
 # Bat settings
 alias cat='bat --style=numbers,changes,grid'
-export BAT_THEME="Monokai Extended"
+export BAT_THEME="base16"
 
 # Syntax highlighting
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
