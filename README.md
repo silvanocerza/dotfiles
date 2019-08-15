@@ -3,4 +3,4 @@ Dotfiles
 
 Various configuration files
 
-Clone in `$HOME` and link them where they should be linked.
+Run `link.sh` to create symlinks.
