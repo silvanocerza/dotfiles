@@ -1,0 +1,10 @@
+[Unit]
+Description=Changes wallpaper randomly
+
+[Service]
+Type=oneshot
+ExecStart=feh --randomize --bg-scale %h/.wallpaper
+StartLimitBurst=0
+
+[Install]
+WantedBy=graphical.target
