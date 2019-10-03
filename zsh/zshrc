@@ -8,7 +8,7 @@ ZSH_THEME="oxide"
 HIST_STAMPS="mm/dd/yyyy"
 
 # Plugins
-plugins=(git)
+plugins=(git ssh-agent)
 
 # Launches Oh my zsh
 source $ZSH/oh-my-zsh.sh
