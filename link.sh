@@ -17,6 +17,7 @@ ln -s -f $(pwd)/nvim/init.vim ~/.config/nvim/init.vim
 
 # Plasma
 mkdir -p ~/.config/plasma-workspace/env/
+ln -s -f $(pwd)/plasma/ssh-askpass.sh ~/.config/plasma-workspace/env/ssh-askpass.sh
 ln -s -f $(pwd)/plasma/wm.sh ~/.config/plasma-workspace/env/wm.sh
 
 # Tmux
