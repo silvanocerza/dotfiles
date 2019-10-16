@@ -81,7 +81,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+x floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -165,9 +165,6 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 font pango:Monaco Nerd Font 10
-
-# Open screenshot tool
-bindsym --release $mod+x exec spectacle
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
