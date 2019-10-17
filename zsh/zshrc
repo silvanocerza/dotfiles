@@ -10,9 +10,6 @@ HIST_STAMPS="mm/dd/yyyy"
 # Plugins
 plugins=(git ssh-agent)
 
-# Launches Oh my zsh
-source $ZSH/oh-my-zsh.sh
-
 # Python virtualenvwrapper
 source virtualenvwrapper_lazy.sh
 
@@ -34,8 +31,21 @@ alias ls=exa
 # I don't want rg to be a smartass
 alias rg='rg -uu'
 
+# Syntax highlighting
+if [[ -f /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]]; then
+    # On Arch
+    source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+elif [[ -f $HOME/.oh-my-zsh/custom/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]]; then
+    # On WSL Ubuntu
+    plugins+=(fast-syntax-highlighting)
+fi
+
+# Launches Oh my zsh
+source $ZSH/oh-my-zsh.sh
+
 # fzf configs
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Uses fd as default command showing also hidden files
 FZF_DEFAULT_COMMAND="fd --hidden"
@@ -68,9 +78,6 @@ PATH=$PATH:$QBS_ROOT
 alias cat='bat --style=numbers,changes,grid'
 export BAT_THEME="base16"
 
-# Syntax highlighting
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-
 # XAuthority
 export XAUTHORITY=$HOME/.Xauthority
 
@@ -84,3 +91,4 @@ PATH=$PATH:$HOME/flutter/bin
 
 # Launches tmux if not already inside
 [ $DISPLAY ] && [ -z $TMUX ] && tmux
+
