@@ -1,3 +1,14 @@
+# Checks if running on WSL, there's no DISPLAY env var on WSL
+# so this is the only way to run tmux straight away
+if grep -qE "(Microsoft|WSL|Windows)" /proc/version &> /dev/null; then
+    if [ -z $TMUX ]; then
+        tmux
+    fi
+fi
+
+# Launches tmux if not already inside
+[ $DISPLAY ] && [ -z $TMUX ] && tmux
+
 # Oh my zsh install path
 export ZSH=~/.oh-my-zsh
 
@@ -9,9 +20,6 @@ HIST_STAMPS="mm/dd/yyyy"
 
 # Plugins
 plugins=(git ssh-agent)
-
-# Python virtualenvwrapper
-source virtualenvwrapper_lazy.sh
 
 # Sets Neovim has default editor
 alias vim=nvim
@@ -86,9 +94,8 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 # Binaries installed with Yarn
 PATH=$PATH:$HOME/.yarn/bin
 
+# Python virtualenvwrapper
+source virtualenvwrapper_lazy.sh
+
 # Flutter
 PATH=$PATH:$HOME/flutter/bin
-
-# Launches tmux if not already inside
-[ $DISPLAY ] && [ -z $TMUX ] && tmux
-
