@@ -36,17 +36,20 @@ fi
 # I don't want rg to be a smartass
 alias rg='rg -uu'
 
-# Syntax highlighting
-if [[ -f /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]]; then
-    # On Arch
-    source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-elif [[ -f $HOME/.oh-my-zsh/custom/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]]; then
-    # On WSL Ubuntu
+# Syntax highlighting on WSL Ubuntu
+if [[ -f $HOME/.oh-my-zsh/custom/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]]; then
     plugins+=(fast-syntax-highlighting)
 fi
 
 # Launches Oh my zsh
 source $ZSH/oh-my-zsh.sh
+
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+# Syntax highlighting on Arch
+if [[ -f /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]]; then
+    source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+fi
 
 # A colored alternative to ls
 alias ls='exa'
