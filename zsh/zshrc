@@ -33,9 +33,6 @@ then
     PATH=$PATH:$(pythonz list -p | awk 'BEGIN {ORS=":"} /^ / {print $2"/bin"}')
 fi
 
-# An colored alternative to ls
-alias ls=exa
-
 # I don't want rg to be a smartass
 alias rg='rg -uu'
 
@@ -50,6 +47,9 @@ fi
 
 # Launches Oh my zsh
 source $ZSH/oh-my-zsh.sh
+
+# A colored alternative to ls
+alias ls='exa'
 
 # fzf configs
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
