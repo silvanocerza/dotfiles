@@ -44,8 +44,6 @@ fi
 # Launches Oh my zsh
 source $ZSH/oh-my-zsh.sh
 
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-
 # Syntax highlighting on Arch
 if [[ -f /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]]; then
     source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
