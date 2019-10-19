@@ -98,5 +98,8 @@ PATH=$PATH:$HOME/.yarn/bin
 # Python virtualenvwrapper
 source virtualenvwrapper_lazy.sh
 
+# Dart
+PATH=$PATH:/usr/lib/dart/bin
+
 # Flutter
 PATH=$PATH:$HOME/flutter/bin
