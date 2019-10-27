@@ -179,13 +179,13 @@ bindsym --release button2 kill
 bindsym $mod+Control+l exec /usr/lib/kscreenlocker_greet
 
 # Volume up
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
 
 # Volume down
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
 
 # Mute
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMute exec --no-startup-id pamixer -t
 
 # Screen brightness up
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20
