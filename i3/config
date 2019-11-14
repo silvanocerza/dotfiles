@@ -212,6 +212,8 @@ focus_follows_mouse off
 gaps inner 20
 gaps outer 0
 
+smart_gaps on
+
 # Picks a random wallpaper
 exec --no-startup-id feh --randomize --bg-scale ~/.wallpaper/*
 
