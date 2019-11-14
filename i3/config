@@ -209,7 +209,7 @@ for_window [class=".*"] border pixel 0
 # It's annoying
 focus_follows_mouse off
 
-gaps inner 20
+gaps inner 10
 gaps outer 0
 
 smart_gaps on
