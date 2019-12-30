@@ -35,6 +35,9 @@ mkdir -p ~/.oh-my-zsh/custom/themes/
 ln -s -f $(pwd)/zsh/zshrc ~/.zshrc
 ln -s -f $(pwd)/zsh/oxide.zsh-theme ~/.oh-my-zsh/custom/themes/oxide.zsh-theme
 
+# Colored ls
+ln -s -f $(pwd)/dircolors ~/.dircolors
+
 # Systemd
 mkdir -p ~/.config/systemd/user/
 ln -s -f $(pwd)/systemd/wallpaper.service ~/.config/systemd/user/wallpaper.service
