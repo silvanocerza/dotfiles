@@ -87,7 +87,7 @@ PATH=$PATH:$QBS_ROOT
 
 # Bat settings
 alias cat='bat --style=numbers,changes,grid'
-export BAT_THEME="base16"
+export BAT_THEME="Solarized (light)"
 
 # XAuthority
 export XAUTHORITY=$HOME/.Xauthority
