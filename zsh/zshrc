@@ -54,12 +54,15 @@ fi
 
 eval $( dircolors -b $HOME/.dircolors )
 
+# fd must do what I want it to do and not be a smartass
+alias fd="fd --hidden --no-ignore"
+
 # fzf configs
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Uses fd as default command showing also hidden files
-FZF_DEFAULT_COMMAND="fd --hidden"
+FZF_DEFAULT_COMMAND="fd --hidden --no-ignore"
 
 # ctrl+o opens Visual Studio Code on current folder or file
 FZF_DEFAULT_OPTS="--bind='ctrl-o:execute-silent(code {})+abort'"
