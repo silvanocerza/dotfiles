@@ -7,6 +7,7 @@ Plug 'junegunn/fzf.vim'
 
 " Color scheme
 Plug 'morhetz/gruvbox'
+Plug 'lifepillar/vim-solarized8'
 
 " Auto complete
 Plug 'ervandew/supertab'
@@ -45,12 +46,16 @@ call plug#end()
 " color scheme settings
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_italic = 1
-set background=dark
+
+let g:solarized_visibility = 'high'
+let g:solarized_diffmode = 'high'
+let g:solarized_statusline = "flat"
+set background=light
 set termguicolors
 
 " Color scheme
 syntax enable
-colorscheme gruvbox
+colorscheme solarized8
 
 " Sets colored line at specified column
 let &colorcolumn="81,".join(range(121,999),",")
