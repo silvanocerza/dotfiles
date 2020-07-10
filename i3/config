@@ -170,7 +170,7 @@ font pango:Monaco Nerd Font 10
 floating_modifier $mod
 
 # Rofi instead of dmenu
-bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun -show combi -theme 'gruvbox-dark-hard' -icon-theme 'Papirus' -font 'Monaco Nerd Font 20'"
+bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun -show combi -theme 'gruvbox-dark-hard' -show-icons -icon-theme 'Qogir-manjaro' -font 'Monaco Nerd Font 20'"
 
 # The middle button over a titlebar kills the window
 bindsym --release button2 kill

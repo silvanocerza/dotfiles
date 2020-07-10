@@ -1,3 +1,7 @@
+if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+    exec startx
+fi
+
 # Checks if running on WSL, there's no DISPLAY env var on WSL
 # so this is the only way to run tmux straight away
 if grep -qE "(Microsoft|WSL|Windows)" /proc/version &> /dev/null; then

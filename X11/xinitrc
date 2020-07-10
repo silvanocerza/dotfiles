@@ -42,5 +42,6 @@ setxkbmap -option "shift:both_capslock"
 # Caps lock is control
 setxkbmap -option "ctrl:nocaps"
 
-exec startkde
+export DESKTOP_SESSION=plasma
+exec startplasma-x11
 
