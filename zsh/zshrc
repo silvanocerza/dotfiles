@@ -83,8 +83,11 @@ else;
 fi'"
 
 # Golang
-export GOPATH=$HOME/go
-PATH=$PATH:$(go env GOPATH)/bin
+which go &> /dev/null && export GOPATH=$HOME/go
+which go &> /dev/null && PATH=$PATH:$(go env GOPATH)/bin
+
+# asdf
+[ -d "$HOME/.asdf" ] && PATH=$PATH:$HOME/.asdf/shims
 
 PATH=$PATH:$HOME/.local/bin
 
