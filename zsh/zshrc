@@ -28,6 +28,9 @@ HIST_STAMPS="mm/dd/yyyy"
 # Plugins
 plugins=(git ssh-agent)
 
+# Poetry autocompletion if found
+[ -d $ZSH/plugins/poetry ] && plugins+=(poetry)
+
 # Sets Neovim has default editor
 alias vim=nvim
 export VISUAL=nvim
