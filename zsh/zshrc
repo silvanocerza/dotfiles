@@ -18,6 +18,7 @@ setopt magic_equal_subst
 
 # Oh my zsh install path
 export ZSH=~/.oh-my-zsh
+export ZSH_CUSTOM=$ZSH/custom
 
 # Theme
 ZSH_THEME="oxide"
@@ -28,8 +29,11 @@ HIST_STAMPS="mm/dd/yyyy"
 # Plugins
 plugins=(git ssh-agent)
 
+# Zsh-z plugin if found
+[ -d $ZSH_CUSTOM/plugins/zsh-z ] && plugins+=(zsh-z)
+
 # Poetry autocompletion if found
-[ -d $ZSH/plugins/poetry ] && plugins+=(poetry)
+[ -d $ZSH_CUSTOM/plugins/poetry ] && plugins+=(poetry)
 
 # Sets Neovim has default editor
 alias vim=nvim
