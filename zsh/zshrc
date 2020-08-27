@@ -93,9 +93,6 @@ fi'"
 which go &> /dev/null && export GOPATH=$HOME/go
 which go &> /dev/null && PATH=$PATH:$(go env GOPATH)/bin
 
-# asdf
-[ -d "$HOME/.asdf" ] && PATH=$PATH:$HOME/.asdf/shims
-
 PATH=$PATH:$HOME/.local/bin
 
 # Qbs
