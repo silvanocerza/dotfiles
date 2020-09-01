@@ -3,7 +3,7 @@ Description=Changes wallpaper randomly
 
 [Service]
 Type=oneshot
-ExecStart=feh --randomize --bg-scale %h/.wallpaper
+ExecStart=feh --randomize --bg-fill %h/.wallpaper
 StartLimitBurst=0
 
 [Install]
