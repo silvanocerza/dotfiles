@@ -35,6 +35,9 @@ plugins=(git ssh-agent)
 # Poetry autocompletion if found
 [ -d $ZSH_CUSTOM/plugins/poetry ] && plugins+=(poetry)
 
+# Notification plugin if found
+[ -d $ZSH_CUSTOM/plugins/notify ] && plugins+=(notify)
+
 # Sets Neovim has default editor
 alias vim=nvim
 export VISUAL=nvim
