@@ -22,6 +22,13 @@ ln -s -f $(pwd)/plasma/ssh-add.sh ~/.config/autostart-scripts/ssh-add.sh
 ln -s -f $(pwd)/plasma/ssh-askpass.sh ~/.config/plasma-workspace/env/ssh-askpass.sh
 ln -s -f $(pwd)/plasma/wm.sh ~/.config/plasma-workspace/env/wm.sh
 
+# xfce4-terminal
+mkdir -p ~/.config/xfce4/terminal/colorschemes
+ln -s -f $(pwd)/xfce4/terminal/accels.scm ~/.config/xfce4/terminal/accels.scm
+ln -s -f $(pwd)/xfce4/terminal/colorschemes/base16-gruvbox-dark-hard.theme ~/.config/xfce4/terminal/colorschemes/base16-gruvbox-dark-hard.theme
+ln -s -f $(pwd)/xfce4/terminal/colorschemes/base16-solarized-light.theme ~/.config/xfce4/terminal/colorschemes/base16-solarized-light.theme
+ln -s -f $(pwd)/xfce4/terminal/terminalrc ~/.config/xfce4/terminal/terminalrc
+
 # Tmux
 ln -s -f $(pwd)/tmux/tmux.conf ~/.tmux.conf
 
