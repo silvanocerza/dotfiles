@@ -2,7 +2,7 @@
 
 # Fonts
 mkdir -p ~/.local/share/fonts/
-ln -s -f $(pwd)/fonts/Monaco\ Nerd\ Font\ Complete.otf ~/.local/share/fonts/Monaco\ Nerd\ Font\ Complete.otf
+ln -s -f $(pwd)/fonts/PTMono-NerdFont-Regular.ttf ~/.local/share/fonts/PTMono-NerdFont-Regular.ttf
 
 # Git
 ln -s -f $(pwd)/git/gitconfig ~/.gitconfig

@@ -164,13 +164,13 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-font pango:Monaco Nerd Font 10
+font pango:PTMono Nerd Font 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # Rofi instead of dmenu
-bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun -show combi -theme 'gruvbox-dark-hard' -show-icons -icon-theme 'Qogir-manjaro' -font 'Monaco Nerd Font 20'"
+bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun -show combi -theme 'gruvbox-dark-hard' -show-icons -icon-theme 'Qogir-manjaro' -font 'PTMono Nerd Font 20'"
 
 # The middle button over a titlebar kills the window
 bindsym --release button2 kill
