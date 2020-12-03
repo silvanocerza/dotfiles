@@ -29,9 +29,6 @@ HIST_STAMPS="mm/dd/yyyy"
 # Plugins
 plugins=(git ssh-agent)
 
-# Zsh-z plugin if found
-[ -d $ZSH_CUSTOM/plugins/zsh-z ] && plugins+=(zsh-z)
-
 # Poetry autocompletion if found
 [ -d $ZSH_CUSTOM/plugins/poetry ] && plugins+=(poetry)
 
@@ -133,3 +130,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+[ -s "$HOME/.poetry/env" ] && source "$HOME/.poetry/env"
