@@ -103,8 +103,8 @@ QBS_ROOT=$HOME/Qt/Tools/QtCreator/bin
 PATH=$PATH:$QBS_ROOT
 
 # Bat settings
-alias cat='bat --style=numbers,changes,grid'
-export BAT_THEME="Solarized (light)"
+which bat &> /dev/null && alias cat='bat --style=numbers,changes,grid'
+which bat &> /dev/null && export BAT_THEME="Solarized (light)"
 
 # XAuthority
 export XAUTHORITY=$HOME/.Xauthority
@@ -115,7 +115,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 PATH=$PATH:$HOME/.yarn/bin
 
 # Python virtualenvwrapper
-source virtualenvwrapper_lazy.sh
+which virtualenvwrapper_lazy.sh &> /dev/null && source virtualenvwrapper_lazy.sh
 
 # Dart
 PATH=$PATH:/usr/lib/dart/bin
@@ -129,10 +129,12 @@ if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/
 # The next line enables shell command completion for gcloud.
 if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
 
+# Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Poetry
 [ -s "$HOME/.poetry/env" ] && source "$HOME/.poetry/env"
 
 # Rust
