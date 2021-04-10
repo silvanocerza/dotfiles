@@ -1,4 +1,4 @@
-if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+if which systemctl &> /dev/null && systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
     exec startx
 fi
 
@@ -66,7 +66,7 @@ if [[ -f /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlightin
     source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 fi
 
-eval $( dircolors -b $HOME/.dircolors )
+which dircolors &> /dev/null && eval $( dircolors -b $HOME/.dircolors )
 
 # fd must do what I want it to do and not be a smartass
 alias fd="fd --hidden --no-ignore"
@@ -96,20 +96,16 @@ fi'"
 which go &> /dev/null && export GOPATH=$HOME/go
 which go &> /dev/null && PATH=$PATH:$(go env GOPATH)/bin
 
-PATH=$PATH:$HOME/.local/bin
-
-# Qbs
-QBS_ROOT=$HOME/Qt/Tools/QtCreator/bin
-PATH=$PATH:$QBS_ROOT
+[ -f $HOME/.local/bin ] && PATH=$PATH:$HOME/.local/bin
 
 # Bat settings
 which bat &> /dev/null && alias cat='bat --style=numbers,changes,grid'
 which bat &> /dev/null && export BAT_THEME="Solarized (light)"
 
 # XAuthority
-export XAUTHORITY=$HOME/.Xauthority
+[ -f $HOME/.Xauthority ] && export XAUTHORITY=$HOME/.Xauthority
 
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+[ -d /usr/lib/jvm/java-8-openjdk ] && export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 
 # Binaries installed with Yarn
 PATH=$PATH:$HOME/.yarn/bin
@@ -123,19 +119,25 @@ PATH=$PATH:/usr/lib/dart/bin
 # Flutter
 PATH=$PATH:$HOME/flutter/bin
 
-# The next line updates PATH for the Google Cloud SDK.
+# Google Cloud SDK.
 if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
 
-# The next line enables shell command completion for gcloud.
+# gcloud.
 if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# This is for OS X
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # Poetry
 [ -s "$HOME/.poetry/env" ] && source "$HOME/.poetry/env"
 
 # Rust
 [ -s $HOME/.cargo/env ] && source $HOME/.cargo/env
+
+# Loads homebrew
+[ -d /opt/homebrew/bin/ ] && PATH=$PATH:/opt/homebrew/bin

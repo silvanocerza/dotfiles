@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Would be cool to use OSTYPE env var here to handle different OSs
+
 # Fonts
 mkdir -p ~/.local/share/fonts/
 ln -s -f $(pwd)/fonts/PTMono-NerdFont-Regular.ttf ~/.local/share/fonts/PTMono-NerdFont-Regular.ttf
