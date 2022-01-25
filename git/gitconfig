@@ -21,6 +21,12 @@
 
 [merge]
     tool = meld
+    conflictStyle = zdiff3
+
+[diff]
+    algorithm = histogram
+    colorMoved = dimmed-zebra
+    colorMovedWS = no
 
 [rerere]
     enabled = true
