@@ -152,7 +152,7 @@ which direnv &> /dev/null && eval "$(direnv hook zsh)"
 NIX_SH="$HOME/.nix-profile/etc/profile.d/nix.sh"; [ -s "$NIX_SH" ] && . $NIX_SH
 unset NIX_SH
 
-if [ $(which jenv) ]; then
+if [ -z "$(which jenv)" ]; then
     eval export PATH="$HOME/.jenv/shims:${PATH}"
     export JENV_SHELL=zsh
     export JENV_LOADED=1
