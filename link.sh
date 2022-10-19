@@ -22,7 +22,6 @@ mkdir -p ~/.config/autostart-scripts/
 mkdir -p ~/.config/plasma-workspace/env/
 ln -s -f $(pwd)/plasma/ssh-add.sh ~/.config/autostart-scripts/ssh-add.sh
 ln -s -f $(pwd)/plasma/ssh-askpass.sh ~/.config/plasma-workspace/env/ssh-askpass.sh
-ln -s -f $(pwd)/plasma/wm.sh ~/.config/plasma-workspace/env/wm.sh
 
 # xfce4-terminal
 mkdir -p ~/.config/xfce4/terminal/colorschemes
@@ -53,6 +52,11 @@ ln -s -f $(pwd)/dircolors ~/.dircolors
 mkdir -p ~/.config/systemd/user/
 ln -s -f $(pwd)/systemd/wallpaper.service ~/.config/systemd/user/wallpaper.service
 ln -s -f $(pwd)/systemd/wallpaper.timer ~/.config/systemd/user/wallpaper.timer
+
+# i3 on Plasma
+systemctl --user mask plasma-kwin_x11.service
+ln -s -f $(pwd)/plasma/plasma-i3.service ~/.config/systemd/user/plasma-i3.service
+systemctl --user enable plasma-i3.service
 
 # Starts systemd services
 systemctl --user enable wallpaper.{service,timer}
