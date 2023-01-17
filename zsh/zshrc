@@ -154,3 +154,7 @@ unset NIX_SH
 
 which jenv &> /dev/null && eval "$(jenv init -)"
 
+which pyenv &> /dev/null && export PYENV_ROOT="$HOME/.pyenv"
+which pyenv &> /dev/null && export PATH="$PYENV_ROOT/bin:$PATH"
+which pyenv &> /dev/null && eval "$(pyenv init -)"
+
