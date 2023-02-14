@@ -158,3 +158,10 @@ which pyenv &> /dev/null && export PYENV_ROOT="$HOME/.pyenv"
 which pyenv &> /dev/null && export PATH="$PYENV_ROOT/bin:$PATH"
 which pyenv &> /dev/null && eval "$(pyenv init -)"
 
+
+# The next line updates PATH for the Google Cloud SDK.
+[ -f "$HOME/google-cloud-sdk/path.zsh.inc" ] && . "$HOME/google-cloud-sdk/path.zsh.inc"
+
+# The next line enables shell command completion for gcloud.
+[ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ] && . "$HOME/google-cloud-sdk/completion.zsh.inc"
+
