@@ -6,12 +6,12 @@ fi
 # so this is the only way to run tmux straight away
 if grep -qE "(Microsoft|WSL|Windows)" /proc/version &> /dev/null; then
     if [ -z $TMUX ]; then
-        tmux
+        which tmux &> /dev/null && tmux
     fi
 fi
 
 # Launches tmux if not already inside
-[ $DISPLAY ] && [ -z $TMUX ] && tmux
+[ $DISPLAY ] && [ -z $TMUX ] && which tmux &> /dev/null && tmux
 
 # Better autocomplete
 setopt magic_equal_subst
