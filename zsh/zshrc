@@ -176,3 +176,5 @@ which aws_completer &> /dev/null && complete -C "$(which aws_completer)" aws
 which starship &> /dev/null && eval "$(starship init zsh)"
 
 which zoxide &> /dev/null && eval "$(zoxide init zsh)"
+
+which hatch &> /dev/null && alias h=hatch
