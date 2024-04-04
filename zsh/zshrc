@@ -169,3 +169,10 @@ which aws_completer &> /dev/null && export PATH="$(which aws_completer):$PATH"
 which aws_completer &> /dev/null && autoload bashcompinit && bashcompinit
 which aws_completer &> /dev/null && autoload -Uz compinit && compinit
 which aws_completer &> /dev/null && complete -C "$(which aws_completer)" aws
+
+
+# STARSHIP 🚀
+# https://starship.rs
+which starship &> /dev/null && eval "$(starship init zsh)"
+
+which zoxide &> /dev/null && eval "$(zoxide init zsh)"
