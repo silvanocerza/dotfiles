@@ -103,10 +103,6 @@ which go &> /dev/null && PATH=$PATH:$(go env GOPATH)/bin
 
 [ -f $HOME/.local/bin ] && PATH=$PATH:$HOME/.local/bin
 
-# Bat settings
-which bat &> /dev/null && alias cat='bat --style=numbers,changes,grid'
-which bat &> /dev/null && export BAT_THEME="Solarized (light)"
-
 # XAuthority
 [ -f $HOME/.Xauthority ] && export XAUTHORITY=$HOME/.Xauthority
 
