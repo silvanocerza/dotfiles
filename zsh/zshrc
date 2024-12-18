@@ -149,9 +149,6 @@ export NVM_DIR="$HOME/.nvm"
 
 which direnv &> /dev/null && eval "$(direnv hook zsh)"
 
-NIX_SH="$HOME/.nix-profile/etc/profile.d/nix.sh"; [ -s "$NIX_SH" ] && . $NIX_SH
-unset NIX_SH
-
 which jenv &> /dev/null && eval "$(jenv init -)"
 
 which pyenv &> /dev/null && export PYENV_ROOT="$HOME/.pyenv"
