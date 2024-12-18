@@ -166,3 +166,7 @@ which aws_completer &> /dev/null && complete -C "$(which aws_completer)" aws
 which zoxide &> /dev/null && eval "$(zoxide init zsh)"
 
 which hatch &> /dev/null && alias h=hatch
+
+# pnpm (macOS)
+[ -d $HOME/Library/pnpm ] && export PNPM_HOME="$HOME/Library/pnpm"
+[ -d $HOME/Library/pnpm ] && export PATH="$PNPM_HOME:$PATH"
