@@ -5,6 +5,7 @@
 [alias]
     co = checkout
     ci = commit
+    cl = clone
     st = status
     f = fetch
     br = branch
@@ -75,4 +76,3 @@
 
 [branch]
     sort = -committerdate
-
