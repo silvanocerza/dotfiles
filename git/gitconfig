@@ -30,6 +30,8 @@
     algorithm = histogram
     colorMoved = dimmed-zebra
     colorMovedWS = no
+    mnemonicPrefix = true
+    renames = true
 
 [rerere]
     enabled = true
@@ -76,3 +78,6 @@
 
 [branch]
     sort = -committerdate
+
+[commit]
+    verbose = true
