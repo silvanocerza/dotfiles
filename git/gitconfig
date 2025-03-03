@@ -9,8 +9,8 @@
     st = status
     f = fetch
     br = branch
-    lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) %C(bold green)(%ar)%C(reset) %C(yellow)- %an%C(reset)%C(auto)%d%C(reset)%n"        "%C(white)%s%C(reset)' --all
-    lgg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+    lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) %C(bold green)(%ar)%C(reset) %C(yellow)- %an%C(reset)%C(auto)%d%C(reset)%n"        "%C(auto)%s%C(reset)' --all
+    lgg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(auto)%s%C(reset) %C(auto)- %an%C(reset)'
     type = cat-file -t
     dump = cat-file -p
     # Lists all local branches that have been deleted on remote
