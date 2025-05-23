@@ -170,3 +170,6 @@ which hatch &> /dev/null && alias h=hatch
 # pnpm (macOS)
 [ -d $HOME/Library/pnpm ] && export PNPM_HOME="$HOME/Library/pnpm"
 [ -d $HOME/Library/pnpm ] && export PATH="$PNPM_HOME:$PATH"
+
+# Disable stupidly annoying homebrew auto updating when I just want to install a single package
+export HOMEBREW_NO_AUTO_UPDATE=1
