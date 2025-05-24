@@ -166,3 +166,5 @@ which hatch &> /dev/null && alias h=hatch
 
 # Disable stupidly annoying homebrew auto updating when I just want to install a single package
 export HOMEBREW_NO_AUTO_UPDATE=1
+
+which jj &> /dev/null && source <(COMPLETE=zsh jj)
