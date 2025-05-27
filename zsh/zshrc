@@ -97,6 +97,8 @@ else;
     tput setaf 1; echo YOU ARE NOT SUPPOSED TO SEE THIS!
 fi'"
 
+which fzf &> /dev/null && source <(fzf --zsh)
+
 # Golang
 which go &> /dev/null && export GOPATH=$HOME/go
 which go &> /dev/null && PATH=$PATH:$(go env GOPATH)/bin
