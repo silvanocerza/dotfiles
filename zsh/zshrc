@@ -170,3 +170,6 @@ which hatch &> /dev/null && alias h=hatch
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 which jj &> /dev/null && source <(COMPLETE=zsh jj)
+
+# Initialise Ruby version manager if found
+which rbenv &> /dev/null && eval "$(rbenv init -)"
