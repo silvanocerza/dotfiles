@@ -173,3 +173,6 @@ which jj &> /dev/null && source <(COMPLETE=zsh jj)
 
 # Initialise Ruby version manager if found
 which rbenv &> /dev/null && eval "$(rbenv init -)"
+
+# Initialise Perl version manager if found
+which plenv > /dev/null && eval "$(plenv init - zsh)"
