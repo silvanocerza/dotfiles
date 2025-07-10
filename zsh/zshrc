@@ -137,7 +137,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s $HOME/.cargo/env ] && source $HOME/.cargo/env
 
 # Overrides all system tools with ones install by brew
-[ -d /opt/homebrew/Cellar/git ] && PATH="/opt/homebrew/bin:$PATH"
+[ -d /opt/homebrew/bin ] && PATH="/opt/homebrew/bin:$PATH"
 
 which direnv &> /dev/null && eval "$(direnv hook zsh)"
 
