@@ -110,6 +110,8 @@ which go &> /dev/null && PATH=$PATH:$(go env GOPATH)/bin
 
 [ -d /usr/lib/jvm/java-8-openjdk ] && export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 
+[ -d /opt/homebrew/opt/openjdk ] && export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
 # Binaries installed with Yarn
 PATH=$PATH:$HOME/.yarn/bin
 
