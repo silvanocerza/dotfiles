@@ -1,0 +1,8 @@
+
+theme = light:iTerm2 Solarized Light,dark:Solarized Dark Higher Contrast
+font-size = 20
+font-family = PTMono Nerd Font
+
+# Shortcuts
+keybind = cmd+backspace=text:\x15
+keybind = shift+enter=text:\x1b\r
