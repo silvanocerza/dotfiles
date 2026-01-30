@@ -29,6 +29,9 @@ HIST_STAMPS="mm/dd/yyyy"
 # Plugins
 plugins=(git ssh-agent)
 
+# Docker plugin if Docker is installed
+which docker &> /dev/null && plugins+=(docker)
+
 # Zsh-z plugin if found
 [ -d $ZSH_CUSTOM/plugins/zsh-z ] && plugins+=(zsh-z)
 
