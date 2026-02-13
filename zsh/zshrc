@@ -156,7 +156,7 @@ which pyenv &> /dev/null && eval "$(pyenv init -)"
 [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ] && . "$HOME/google-cloud-sdk/path.zsh.inc"
 
 # The next line enables shell command completion for gcloud.
-which gcloud &> /dev/null && source "$(gcloud info --format='value(installation.sdk_root)')/completion.zsh.inc"
+[ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ] && . "$HOME/google-cloud-sdk/completion.zsh.inc"
 
 which aws_completer &> /dev/null && export PATH="${$(which aws_completer)%/*}/:$PATH"
 which aws_completer &> /dev/null && autoload bashcompinit && bashcompinit
