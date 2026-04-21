@@ -6,3 +6,5 @@ font-family = PTMono Nerd Font
 # Shortcuts
 keybind = cmd+backspace=text:\x15
 keybind = shift+enter=text:\x1b\r
+
+shell-integration-features = ssh-terminfo
