@@ -16,6 +16,12 @@ fi
 # Better autocomplete
 setopt magic_equal_subst
 
+# I hate that I need to do this shit ffs
+# https://cli.github.com/telemetry
+# Fucking GitHub
+export GH_TELEMETRY=false
+export DO_NOT_TRACK=true
+
 # Oh my zsh install path
 export ZSH=~/.oh-my-zsh
 export ZSH_CUSTOM=$ZSH/custom
