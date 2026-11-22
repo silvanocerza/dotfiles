@@ -47,8 +47,7 @@ which docker &> /dev/null && plugins+=(docker)
 # Notification plugin if found
 [ -d $ZSH_CUSTOM/plugins/notify ] && plugins+=(notify)
 
-# Sets Neovim has default editor
-which nvim &> /dev/null && alias vim=nvim
+# Sets vim has default editor
 export VISUAL=vim
 
 # Exports all installed python version (via Pythonz) to
