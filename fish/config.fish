@@ -28,13 +28,15 @@ end
 set -gx GH_TELEMETRY false
 set -gx DO_NOT_TRACK true
 
-# ssh-agent: reuse a saved agent across fish sessions, start one if needed
+# ssh-agent: reuse a saved agent across fish sessions, start one if needed.
+# Never loads keys itself (no prompt/block): Plasma's ssh-add autostart or a
+# manual `ssh-add` handles that.
 function _start_ssh_agent
     set -l env_file ~/.ssh/agent.fish
 
     if test -f $env_file
         source $env_file
-        if set -q SSH_AUTH_SOCK; and test -S $SSH_AUTH_SOCK; and ssh-add -l >/dev/null 2>&1
+        if set -q SSH_AUTH_SOCK; and test -S $SSH_AUTH_SOCK
             return 0
         end
     end
@@ -43,9 +45,6 @@ function _start_ssh_agent
         | sed -n 's/^setenv \(SSH_AUTH_SOCK\|SSH_AGENT_PID\) \(.*\);/set -gx \1 \2/p' \
         | tee $env_file \
         | source
-
-    # Load default keys (~/.ssh/id_*); pass paths only if you use custom names
-    ssh-add 2>/dev/null
 end
 
 if not set -q SSH_AUTH_SOCK; or not test -S "$SSH_AUTH_SOCK"
